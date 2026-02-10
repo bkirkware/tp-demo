@@ -1,7 +1,7 @@
 package com.example.tpdemo;
 
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class CfEnvController {
 
-    private static final Logger log = LogManager.getLogger(CfEnvController.class);
+    private static final Logger log = LoggerFactory.getLogger(CfEnvController.class);
 
     private final CfEnvService cfEnvService;
 

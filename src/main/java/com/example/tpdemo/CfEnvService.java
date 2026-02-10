@@ -3,8 +3,8 @@ package com.example.tpdemo;
 import io.pivotal.cfenv.core.CfApplication;
 import io.pivotal.cfenv.core.CfEnv;
 import io.pivotal.cfenv.core.CfService;
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.boot.ApplicationArguments;
 import org.springframework.boot.ApplicationRunner;
 import org.springframework.stereotype.Component;
@@ -16,7 +16,7 @@ import java.util.List;
 
 @Component
 public class CfEnvService implements ApplicationRunner {
-    private static final Logger log = LogManager.getLogger(CfEnvService.class);
+    private static final Logger log = LoggerFactory.getLogger(CfEnvService.class);
 
     private CfEnvInfo cfEnvInfo;
 
